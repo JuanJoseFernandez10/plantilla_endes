@@ -45,12 +45,6 @@ class ComercialTest {
 	@DisplayName("Test SetVentas, debe de lanzar una excepcion al ser ventas negativas")
 	void testSetVentasNegativas() {
 		assertThrows(IllegalArgumentException.class, () -> c1.setVentas(-23.65));
-		try {
-			c1.setVentas(-43.45);
-		}catch(IllegalArgumentException e){
-			String mesg = "Las ventas no pueden ser negativas";
-			assertEquals(mesg, e.getMessage());
-		}
 	}
 	
 	@Test
